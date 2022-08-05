@@ -19,6 +19,8 @@ public class LevelManager : MonoBehaviour
         {
             levelIndex = 0;
         }
+
+       
         Level level = testLevel != null ? LevelSpawn(testLevel) : LevelSpawn(_level[levelIndex]);
     }
     private Level LevelSpawn(Level level) => Instantiate(level,level.transform.position, Quaternion.identity);
